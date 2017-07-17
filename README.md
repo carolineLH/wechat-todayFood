@@ -23,10 +23,10 @@
     "pages/detail/detail"
   ],
   ```
-  ## 效果预览：
+## 效果预览：
   ![整体预览](https://github.com/carolineLH/wechat-todayFood/blob/master/todayfood/images/GIF.gif) <br>
   
-  ## 项目功能：
+## 项目功能：
    * 首页插入一组图片，并实现跳转
    * scroll-view的使用，可滚动视图区域生成
    * 视频播放，video组件使用
@@ -37,8 +37,8 @@
    * 动态获取评论时间 
    * 利用mock 传数据
    
-   ## 具体功能解析
-   ### 1. 插入一组图片，并实现跳转<br>
+ ## 具体功能解析
+ ### 1. 插入一组图片，并实现跳转<br>
    因为是要插入一组图片，所以我们可以用wx:for={{}}来实现 <br>
    HTML结构
    ```
@@ -59,7 +59,7 @@
     })
   },
    ```
-   ### 2.scroll-view的使用，可滚动视图区域生成<br>
+### ２.scroll-view的使用，可滚动视图区域生成<br>
    在需要设置滚动区域，用scroll-view标签把内容包住<br>
    HTML结构
    ```
@@ -102,7 +102,7 @@ handleLower: function (event) {
     console.log("handleLower");
   },
   ```
-  ### 3.视频播放，video组件使用（这是我踩过的坑！）
+### ３.视频播放，video组件使用（这是我踩过的坑！）
    HTML结构
    ```
    <view class="video">
@@ -139,7 +139,7 @@ handleLower: function (event) {
     },
 })
  ```
-  ### 4.发表评论（最大的坑！）
+### ４.发表评论（最大的坑！）
     包括 ：<br>
    * 获取数据及交互反馈
    * 获取用户信息
@@ -213,7 +213,7 @@ module.exports = {
   formatTime: formatTime
 }
 ```
- ### 5.获取用户信息：
+### ５.获取用户信息：
  HTML结构
  ``` 
  <view class="userInfo">
@@ -240,7 +240,7 @@ module.exports = {
   }
 })
 ```
-### 7.用ｍｏｃｋ传递数据
+### ６.用ｍｏｃｋ传递数据
 var id=options.id; 
     //调用应用实例的方法获取全局数据
   var api_url='https://www.easy-mock.com/mock/5966410258618039284c745b/list/list';
@@ -257,11 +257,12 @@ var id=options.id;
     }
   })
   
-  ## 坑．．．＜ｂｒ＞
+## 坑．．＜ｂｒ＞
   １．由第一个页面中传递过来的数据不在是一个数组，而是一个对象，得到其id就得到其内容　＜ｂｒ＞
   ２．发表评论的时候要对输入的评论内容进行判断，加入评论信息时可以把已有的评论信息和实时加入的评论信息当成两个数组，利用ｐｕｓｈ（）方法把评论内容加入，再利用concat()方法把两个数组连接起来。
   ３.就是去看文档啊，看文档。
-  ## 项目地址：
+  
+## 项目地址：
   https://github.com/carolineLH/wechat-todayFood
   
   对了，视频可能不太好放出来，有时候要看缘分，因为视频本身权限原因，我也好难过啊😭
