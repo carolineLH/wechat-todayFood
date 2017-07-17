@@ -5,7 +5,7 @@
 ## 开发工具：
 1. 下载开发者工具：[微信小程序官网](https://mp.weixin.qq.com/debug/wxadoc/dev/)，下载好后就可以进行开发了哟。如果你想要发布你的小程序的话呢，就要在创建小程序的时候获取AppId,可以去https://mp.weixin.qq.com 这里了解详情获取;
 2. 开发文档：[微信小程序宝典秘籍](https://www.w3cschool.cn/weixinapp/9wou1q8j.html)，这个是开发小程序的宝典，里面包括了各种组件，API,框架and so on...　<br>
-3.Easy Mork： [easy-mock](www.easy-mock.com),通过它能快速生成模拟数据的服务，它能为我们提供一个数据接口url，然后使用wx.request({ url: url, .....})来发送数据请求，我的数据大部分都是通过Mork模拟的；
+3.　Easy Mork： [easy-mock](www.easy-mock.com),通过它能快速生成模拟数据的服务，它能为我们提供一个数据接口url，然后使用wx.request({ url: url, .....})来发送数据请求，我的数据大部分都是通过Mork模拟的；
 
 ## 创建小程序后：
 会自动生成一些基本文件： <br>
@@ -59,7 +59,7 @@
     })
   　},
  　```
-### ２.scroll-view的使用，可滚动视图区域生成<br>
+### ２.　scroll-view的使用，可滚动视图区域生成<br>
 在需要设置滚动区域，用scroll-view标签把内容包住<br>
 HTML结构
 ```
@@ -102,7 +102,7 @@ handleUpper: function (event) {
 console.log("handleLower");
   },
 ```
-### ３.视频播放，video组件使用（这是我踩过的坑！）
+### ３.　视频播放，video组件使用（这是我踩过的坑！）
 HTML结构
 ```
 <view class="video">
@@ -139,7 +139,7 @@ js配置 <br>
     },
 })
 ```
-### ４.发表评论（最大的坑！）
+### ４.　发表评论（最大的坑！）
 包括 ：<br>
    * 获取数据及交互反馈　<br>
    * 获取用户信息　<br>
@@ -213,7 +213,7 @@ module.exports = {
   formatTime: formatTime
 }
 ```
-### ５.获取用户信息：
+### ５.　获取用户信息：
 HTML结构
 ``` 
 <view class="userInfo">
@@ -240,7 +240,7 @@ js结构
   }
 })
 ```
-### ６.用ｍｏｃｋ传递数据
+### ６.　用ｍｏｃｋ传递数据
 ```
 var id=options.id; 
     //调用应用实例的方法获取全局数据
@@ -258,7 +258,7 @@ var id=options.id;
     }
   })
 ```
-## 坑．．．<br>
+## 坑．．．　<br>
 １．由第一个页面中传递过来的数据不在是一个数组，而是一个对象，得到其id就得到其内容。<br>
 ２．发表评论的时候要对输入的评论内容进行判断，加入评论信息时可以把已有的评论信息和实时加入的评论信息当成两个数组，利用ｐｕｓｈ（）方法把评论内容加　入，再利用concat()方法把两个数组连接起来。<br>
 ３.就是去看文档啊，看文档！<br>
