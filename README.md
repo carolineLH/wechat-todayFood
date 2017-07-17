@@ -27,25 +27,25 @@
   ![整体预览](https://github.com/carolineLH/wechat-todayFood/blob/master/todayfood/images/GIF.gif) <br>
   
 ## 项目功能：
-   * 首页插入一组图片，并实现跳转
-   * scroll-view的使用，可滚动视图区域生成
-   * 视频播放，video组件使用
-   * 发表评论
-   * 评论显示
-   * 获取数据及交互反馈
-   * 获取用户信息
-   * 动态获取评论时间 
-   * 利用mock 传数据
+   * 首页插入一组图片，并实现跳转　<br>
+   * scroll-view的使用，可滚动视图区域生成　<br>
+   * 视频播放，video组件使用　<br>
+   * 发表评论　<br>
+   * 评论显示　<br>
+   * 获取数据及交互反馈　<br>
+   * 获取用户信息　<br>
+   * 动态获取评论时间　<br> 
+   * 利用mock 传数据　<br>
    
 ## 具体功能解析
-### 1. 插入一组图片，并实现跳转<br>
+### 1. 插入一组图片，并实现跳转　<br>
    因为是要插入一组图片，所以我们可以用wx:for={{}}来实现 <br>
    HTML结构
    ```
    <view wx:for="{{foodList}}" wx:key="item" bindtap="bindViewTap" id="{{item.id}}" class="list">
   　<view class="image">
     <image src="{{item.src}}"/>
-  </view>
+  　</view>
    ```
   js配置 <br>
   我是在这里插入了图片的地址信息，在data数组里面<br>
@@ -57,8 +57,8 @@
     wx.navigateTo({
       url: '../detail/detail?id='+ id
     })
-  },
- ```
+  　},
+ 　```
 ### ２.scroll-view的使用，可滚动视图区域生成<br>
 在需要设置滚动区域，用scroll-view标签把内容包住<br>
 HTML结构
@@ -141,10 +141,10 @@ js配置 <br>
 ```
 ### ４.发表评论（最大的坑！）
 包括 ：<br>
-   * 获取数据及交互反馈
-   * 获取用户信息
-   * 动态获取评论时间 
-HTML结构
+   * 获取数据及交互反馈　<br>
+   * 获取用户信息　<br>
+   * 动态获取评论时间　<br> 
+HTML结构　<br>
 ```
 <view class="inputtext">   
         <input type="text" name="com" class="text"bindinput="bindInput" value="{{content}}" placeholder="我来说两句" />
@@ -206,8 +206,8 @@ issue:function(){
 }
 },
 ```
-动态获取评论时间<br>
-在util.js中<br>
+动态获取评论时间　<br>
+在util.js中　<br>
 ```
 module.exports = {
   formatTime: formatTime
@@ -261,7 +261,7 @@ var id=options.id;
 ## 坑．．．<br>
 １．由第一个页面中传递过来的数据不在是一个数组，而是一个对象，得到其id就得到其内容。<br>
 ２．发表评论的时候要对输入的评论内容进行判断，加入评论信息时可以把已有的评论信息和实时加入的评论信息当成两个数组，利用ｐｕｓｈ（）方法把评论内容加　入，再利用concat()方法把两个数组连接起来。<br>
-３.就是去看文档啊，看文档。<br>
+３.就是去看文档啊，看文档！<br>
   
 ## 项目地址：
 https://github.com/carolineLH/wechat-todayFood
