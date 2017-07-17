@@ -1,0 +1,45 @@
+<view class="container">
+  <view class="content">
+    <view class="video">
+            <video src="{{videoInfo.src}}" crossOrigin="anonymous"autoplay controls/>
+              <button bindtap="bindButtonTap"></button>
+            </view> 
+    </view>
+    <scroll-view class="scroll-user" style="height:{{windowHeight}}px" scroll-y="true" bindscrolltolower="handleLower" bindscrolltoupper="handleUpper">
+    <view class="box">
+            <text  class="text1">{{videoInfo.title}}</text>
+            <text class="text2">{{videoInfo.number}}</text>
+            <text  class="text3">{{videoInfo.time}}</text>
+            <text  class="text4">{{videoInfo.desc}}</text>   
+    </view>
+    <view class="comment" wx:for="{{userlist}}">
+          <view class="userInfo">
+            <view class="userinfo-top"> 
+            <image class="userinfo-avatar" src="{{item.avatarUrl}}" background-size="cover"></image>
+            <text class="userinfo-nickname">{{item.nickName}}</text>
+            <text class="text4">{{item.time}}</text>
+            </view>
+            <text class="con">{{item.desc}}</text>
+            <div class="clear"></div>
+          </view>      
+   </view> 
+     <view class="comment" wx:for="{{comment}}">
+          <view class="userInfo">
+            <view class="userinfo-top"> 
+            <image class="userinfo-avatar" src="{{item.avatarUrl}}" background-size="cover"></image>
+            <text class="userinfo-nickname">{{item.nickName}}</text>
+            <text class="text4">{{item.time}}</text>
+            </view>
+            <text class="con">{{item.desc}}</text>
+          </view>      
+   </view>
+  </scroll-view>
+    <view class="video">
+       <video id="item.id" src=""  controls binderror="videoErrorCallback" hidden="{{hiddenVideo}}"></video>
+       <button bindtap="bindButtonTap"></button>
+    </view>
+     <view class="inputtext">   
+        <input type="text" name="com" class="text"bindinput="bindInput" value="{{content}}" placeholder="我来说两句" />
+        <button type="submit"  bindtap="issue"  class="btn">发布</button>
+     </view>
+</view>

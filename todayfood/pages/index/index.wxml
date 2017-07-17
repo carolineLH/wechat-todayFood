@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+<view wx:for="{{foodList}}" wx:key="item" bindtap="bindViewTap" id="{{item.id}}" class="list">
+  <view class="image">
+    <image src="{{item.src}}"/>
+  </view>
+ <view class="text">  
+    <text>{{item.desc}}</text>
+    <image src="/../images/1.png"/>  
+ </view>
+</view>
+</view>
